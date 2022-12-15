@@ -7,7 +7,7 @@ const DELETE_PLANE = 'jet-log-frontend/aeroplanes/DELETE_PLANE';
 const initialState = [];
 
 export const fetchAeroplane = createAsyncThunk(GET_AEROPLANE, async () => {
-  const data = await fetch('http://127.0.0.1:3000/api/v1/aeroplanes');
+  const data = await fetch('/api/v1/aeroplanes');
   const response = await data.json();
   const newList = Object.keys(response);
   const aeros = [];
@@ -27,7 +27,7 @@ export const fetchAeroplane = createAsyncThunk(GET_AEROPLANE, async () => {
 
 export const addAeroplane = (aeroplane) => (dispatch) => {
   axios
-    .post('http://localhost:3000/api/v1/aeroplanes', aeroplane)
+    .post('/api/v1/aeroplanes', aeroplane)
     .then((res) => {
       dispatch({
         type: ADD_AEROPLANE,
@@ -38,7 +38,7 @@ export const addAeroplane = (aeroplane) => (dispatch) => {
 };
 
 export const deletePlane = createAsyncThunk(DELETE_PLANE, async (id) => {
-  await fetch(`http://127.0.0.1:3000/api/v1/aeroplanes/${id}`, {
+  await fetch(`/api/v1/aeroplanes/${id}`, {
     method: 'DELETE',
   });
   return +id;

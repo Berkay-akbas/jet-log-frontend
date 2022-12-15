@@ -6,7 +6,7 @@ const initialState = [];
 export const fetchResevations = createAsyncThunk(GET_RESERVATIONS, async () => {
   const session = JSON.parse(localStorage.getItem('session'));
 
-  const data = await fetch('http://127.0.0.1:3000/api/v1/reservations', {
+  const data = await fetch('/api/v1/reservations', {
     method: 'GET',
     headers: {
       'Content-type': 'application/json',
