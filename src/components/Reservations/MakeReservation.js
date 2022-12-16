@@ -28,7 +28,7 @@ const ReservationFrom = () => {
       }
     };
 
-    fetch('http://localhost:3000/api/v1/reservations', {
+    fetch('https://jet-log.herokuapp.com/api/v1/reservations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -51,7 +51,7 @@ const Authentication = () => {
   const handleLogin = () => {
     const form = document.querySelector('form');
     validate();
-    fetch('http://127.0.0.1:3000/api/v1/login', {
+    fetch('https://jet-log.herokuapp.com/api/v1/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const Authentication = () => {
         document.querySelector('.mail-err').previousSibling.style.borderColor = '#E0E0E0';
       }, 2000);
     } else {
-      fetch('http://127.0.0.1:3000/api/v1/users', {
+      fetch('https://jet-log.herokuapp.com/api/v1/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
