@@ -6,7 +6,7 @@ const initialState = [];
 export const fetchResevations = createAsyncThunk(GET_RESERVATIONS, async () => {
   const session = JSON.parse(localStorage.getItem('session'));
 
-  const data = await fetch('https://jet-log.herokuapp.com/api/v1/reservations', {
+  const data = await fetch('https://jetlog.onrender.com/api/v1/reservations', {
     method: 'GET',
     headers: {
       'Content-type': 'application/json',
