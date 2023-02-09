@@ -28,7 +28,7 @@ const ReservationFrom = () => {
       }
     };
 
-    fetch('https://jet-log.herokuapp.com/api/v1/reservations', {
+    fetch('https://jetlog.onrender.com/api/v1/reservations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
